@@ -9,11 +9,11 @@ endif
 let current_compiler="jai"
 
 function! FindJaiEntrypoint(filename)
-	let buildfile = 'first.jai'
-	let buildfile2 = 'build.jai'
 	if exists("g:jai_entrypoint")
 		return g:jai_entrypoint
 	else 
+        let buildfile = 'build.jai'
+        let buildfile2 = 'first.jai'
 		if filereadable(buildfile)
 			return buildfile
 		else
@@ -39,7 +39,7 @@ function! FindJaiCompiler()
 endfunction
 
 function! GetJaiMakeprg()
-    return FindJaiCompiler() . " -no_color -quiet -x64 " . FindJaiEntrypoint(expand('%'))
+    return FindJaiCompiler() . " -no_color -quiet " . FindJaiEntrypoint(expand('%'))
 endfunction
 
 function! UpdateJaiMakeprg()

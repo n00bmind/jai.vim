@@ -1,13 +1,11 @@
 # Jai.vim
 
-Syntax highlighting for [Jonathan Blow's](https://twitter.com/j_blow) programming language **Jai**.
+Vim language plugin for [Jonathan Blow's](https://twitter.com/j_blow) programming language **Jai**.
 
 ## Configuration
 
-By default, case labels are indented. If you don't want that, you can disable it:
-```
-let b:jai_indent_options = {'case_labels':0}
-```
+By default, indentation uses `cindent` rules, so you can customize it the same way you would do for C/C++ files
+(see Vim documentation).
 
 
 ## Installation
@@ -15,20 +13,20 @@ let b:jai_indent_options = {'case_labels':0}
 If you use pathogen clone this plugin to `~/.vim/bundle`
 
 ```bash
-git clone https://github.com/jansedivy/jai.vim.git ~/.vim/bundle
+git clone https://github.com/n00bmind/jai.vim.git ~/.vim/bundle
 ```
 
 In general, for other plugin managers you have to add configuration line in `~/.vimrc`.
 
 ```viml
 " vim-plug
-Plug 'rluba/jai.vim'
+Plug 'n00bmind/jai.vim'
 
 " NeoBundle
-NeoBundle 'rluba/jai.vim'
+NeoBundle 'n00bmind/jai.vim'
 
 " Vundle
-Plugin 'rluba/jai.vim'
+Plugin 'n00bmind/jai.vim'
 ```
 
 ### Manual installation
